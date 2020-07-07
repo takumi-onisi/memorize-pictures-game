@@ -1,0 +1,198 @@
+/* 共通の部品 */
+input{
+  margin: 7px;
+}
+input[type="button"]{
+  font-size: inherit;
+  margin: 1em;
+}
+
+h1{
+  color: gray;
+}
+
+.textAttention{
+  color:red; 
+}
+
+.pointerEventsNone{
+  pointer-events: none;
+}
+
+.fade{
+  transition: 0.7s;
+  opacity: 0;
+}
+
+.hidden{
+  opacity: 0;
+  display: none;
+}
+
+.message{
+  font-weight: bold;
+}
+
+
+
+
+/* ゲーム本体 */
+#game{
+  text-align: center;
+  padding: 1.5em 3em ;
+  background-color: rgb(163, 255, 140);
+  width: 400px;
+  margin: 0 auto;
+}
+
+#game:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+#gameTitle{
+  margin-bottom: 1em;
+  padding: 0.5em 0 0.5em 0;
+  background-color: white;
+  border-radius: 0.5em;
+}
+
+#gemeMain {
+  width:100%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+#display{
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  height: 300px;
+  
+}
+
+img#mainImage{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  
+}
+
+.MessageArea{
+  position: absolute;
+  left: 5%;
+  top: 40% ;
+  line-height: 1.7em;
+  font-weight: bold;
+  width: 90%;
+  background-color: rgb(164, 247, 247);
+  border-radius: 0.7em 0.7em 0.7em 0.7em;
+
+}
+
+/* 答えがあっていた場合の背景色 */
+#MessageCorrect{
+  background-color: rgb(114, 255, 79);
+}
+/*答えが間違っていた場合の背景色*/
+#MessageNotCorrect{
+  background-color: rgb(255, 237, 71); 
+}
+
+#MessageGameLevel{
+  font-size: 2em ;
+  background-color: white;
+}
+
+
+/* ゲームの答えを入力するエリア関連 */
+#ansBtnArea{
+  overflow: auto;
+  margin: 0 auto;
+  width: 100%;
+  
+}
+
+.ansImage{
+  overflow: auto;
+  padding: 5px;
+}
+
+img#imgBtn0{
+  height:auto;
+  border: solid 1px;
+  display: block;
+  box-shadow: 3px 3px 2px gray;
+  margin:3% 4%;
+  float: left;
+  width: 38%;
+  opacity: 0.9;
+}
+img#imgBtn1{
+  height:auto;
+  border: solid 1px;
+  display: block;
+  box-shadow: 3px 3px 2px gray;
+  margin:3% 4%;
+  float: right;
+  width: 38%;
+  opacity: 0.9;
+}
+img#imgBtn0:hover ,img#imgBtn1:hover{
+  opacity: 1;
+  width: 39%;
+}
+img#imgBtn0:active,img#imgBtn1:active{
+  position: relative;
+  top:3px;
+  left: 3px;
+  box-shadow: 0 0 0;
+}
+
+
+#ansText{
+  background-color: white;
+}
+
+
+
+
+
+
+/* ゲームのレベル関連 */
+
+#gameLevelArea h2{
+  border: solid 1px black;
+}
+
+#gameLevelParameters{
+  text-align: justify;
+}
+
+.levelBox{
+  display: inline-block;
+  margin: 1em 0.5em;
+  padding: 0 5px;
+  border: solid 2px rgb(51, 145, 233);
+  background-color: white;
+  cursor: pointer;
+}
+
+.levelBoxChecked{
+  opacity: 0.8;
+  background-color: rgb(64, 62, 212);
+  color: white;
+  box-shadow: 3px 3px 2px rgb(94, 94, 94) inset;
+}
+
+.levelBox label {
+  cursor: pointer;
+  font-size: 18px;
+}
